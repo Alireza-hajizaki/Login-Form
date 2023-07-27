@@ -1,38 +1,13 @@
-import { Checkbox, Label, TextInput } from 'flowbite-react';
+import { Checkbox, Label } from 'flowbite-react';
 import ButtonElem from '../Button';
-
+import Textfield from '../Textfield';
 
 export default function FormElem() {
   return (
     <div>
       <form className="flex max-w-md flex-col gap-4">
-      <div>
-        <div className="mb-2 block">
-          <Label
-            htmlFor="email1"
-            value="Your email"
-          />
-        </div>
-        <TextInput
-          id="email1"
-          placeholder="name@flowbite.com"
-          required
-          type="email"
-        />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label
-            htmlFor="password1"
-            value="Your password"
-          />
-        </div>
-        <TextInput
-          id="password1"
-          required
-          type="password"
-        />
-      </div>
+        <Textfield value='Your Email' id='email' htmlfor='email' type='email' placeholder="name@flowbite.com"/>
+        <Textfield value='Your password' id='password1' htmlfor='password1' type='password'/>
       <div className="flex items-center gap-2">
         <Checkbox id="remember" />
         <Label htmlFor="remember">
