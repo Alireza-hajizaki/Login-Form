@@ -1,12 +1,10 @@
 import { Button } from 'flowbite-react';
-interface PropType {
-    children: string;
-}
 
-export default function ButtonElem(props: PropType) {
+
+export default function ButtonElem() {
     return (
       <div>
-        <Button>Click me</Button>
+        <Button className='w-[100%] rounded-3xl' color="success">Click me</Button>
       </div>
     );
   }
