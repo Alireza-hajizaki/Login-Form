@@ -13,20 +13,22 @@ export default function FormElem() {
   const[inputValue,setInputValue] = useState("")
   const[user,setUser] = useState<Person | null>(null)
 
+
+  //by Ref
   const handleClick = () => {
     if (emailRef.current && passRef.current){
-      const newUser = {
-        username : inputValue,
-        email: emailRef.current.value,
-        password : passRef.current.value
+        const newUser = {
+          username : inputValue,
+          email: emailRef.current.value,
+          password : passRef.current.value
+        }
+        setUser(newUser)
+        localStorage.setItem('user' , JSON.stringify(newUser))
+        console.log(user);  
       }
-      setUser(newUser)
-      localStorage.setItem('user' , JSON.stringify(newUser))
-      console.log(user);
-      
-    }
   }
 
+//by onChange
   const onChangeStatus=(newValue:string) => {
     setInputValue(newValue)
 }
